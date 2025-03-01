@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="hobbySurvey" action="https://httpbin.org/post" method="POST">
+        <fieldset>
+            <legend>Hobbies Survey</legend>
+
+            
+            <div>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" aria-required="true">
+                <span class="error" id="name-error"></span>
+            </div>
+
+            
+            <div>
+                <p>How often do you engage in hobbies?</p>
+                <input type="radio" id="daily" name="frequency" value="daily">
+                <label for="daily">Daily</label>
+                <input type="radio" id="weekly" name="frequency" value="weekly">
+                <label for="weekly">Weekly</label>
+                <input type="radio" id="monthly" name="frequency" value="monthly">
+                <label for="monthly">Monthly</label>
+                <span class="error" id="frequency-error"></span>
+            </div>
+
+            
+            <div>
+                <p>Which hobbies do you enjoy? (You can select all)</p>
+                <input type="checkbox" id="reading" name="hobbies" value="reading">
+                <label for="reading">Reading</label>
+                <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+                <label for="gaming">Gaming</label>
+                <input type="checkbox" id="sports" name="hobbies" value="sports">
+                <label for="sports">Sports</label>
+                <span class="error" id="hobbies-error"></span>
+            </div>
+
+            
+            <div>
+                <label for="season"> Your Favorite season for hobbies:</label>
+                <select id="season" name="season" aria-required="true">
+                    <option value="">Select a season</option>
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                    <option value="winter">Winter</option>
+                </select>
+                <span class="error" id="season-error"></span>
+            </div>
+
+            
+            <div>
+                <label for="hobbyCode">Hobby Code (e.g., HOB-1234):</label>
+                <input type="text" id="hobbyCode" name="hobbyCode" placeholder="HOB-1234" aria-required="true">
+                <span class="error" id="hobbyCode-error"></span>
+            </div>
+
+            
+            <div>
+                <label for="startDate">When did you start your favorite hobby?</label>
+                <input type="date" id="startDate" name="startDate" aria-required="true">
+                <span class="error" id="startDate-error"></span>
+            </div>
+            <div>
+                <label for="hours">Hours spent per week:</label>
+                <input type="number" id="hours" name="hours" min="0" max="168" aria-required="true">
+                <span class="error" id="hours-error"></span>
+            </div>
+
+            
+            <button type="submit">Submit Survey</button>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
