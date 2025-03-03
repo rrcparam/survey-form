@@ -55,3 +55,14 @@ button:hover {
     margin-left: 10px;
 }
 
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    form {
+        padding: 15px;
+    }
+    button {
+        width: 100%;
+    }
+}
